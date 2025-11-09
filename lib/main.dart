@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:logbook/logbook.dart';
 
 import 'src/flutter_render_object.dart';
+import 'src/the_advanced_layout_rule.dart';
 
 @pragma('vm:entry-point')
 void main([List<String>? args]) => runZonedGuarded<void>(() => runApp(const MainApp()), l.s);
@@ -34,6 +35,15 @@ class Home extends StatelessWidget {
           onTap: () => Navigator.push<void>(
             context,
             CupertinoPageRoute<void>(builder: (context) => const FlutterRenderObject()),
+          ),
+        ),
+
+        ListTile(
+          leading: const Icon(Icons.rule),
+          title: const Text('The Advanced Layout Rule'),
+          onTap: () => Navigator.push<void>(
+            context,
+            CupertinoPageRoute<void>(builder: (context) => const FlutterLayoutArticle()),
           ),
         ),
       ],
