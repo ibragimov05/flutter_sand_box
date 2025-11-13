@@ -235,6 +235,6 @@ linter:
     unnecessary_underscores: true
 
     # Formatter settings
-    formatter:
-      line_length: 120
-      trailing_commas: always
+    # formatter:
+    #   line_length: 120
+    #   trailing_commas: always
