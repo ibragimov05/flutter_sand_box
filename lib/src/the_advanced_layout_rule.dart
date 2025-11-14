@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api, avoid_field_initializers_in_const_classes
+
 /*
  * Flutter: The Advanced Layout Rule Even Beginners Must Know
  * https://medium.com/flutter-community/flutter-the-advanced-layout-rule-even-beginners-must-know-edc9516d1a2
@@ -15,6 +17,8 @@ const big = TextStyle(fontSize: 30);
 //////////////////////////////////////////////////
 
 abstract class Example extends StatelessWidget {
+  const Example({super.key});
+
   String get code;
 
   String get explanation;
@@ -23,7 +27,7 @@ abstract class Example extends StatelessWidget {
 //////////////////////////////////////////////////
 
 class FlutterLayoutArticle extends StatefulWidget {
-  const FlutterLayoutArticle();
+  const FlutterLayoutArticle({super.key});
 
   @override
   _FlutterLayoutArticleState createState() => _FlutterLayoutArticleState();
@@ -37,42 +41,42 @@ class _FlutterLayoutArticleState extends State<FlutterLayoutArticle> {
   late String code;
   late String explanation;
   List<Example> examples = [
-    Example1(),
-    Example2(),
-    Example3(),
-    Example4(),
-    Example5(),
-    Example6(),
-    Example7(),
-    Example8(),
-    Example9(),
-    Example10(),
-    Example11(),
-    Example12(),
-    Example13(),
-    Example14(),
-    Example15(),
-    Example16(),
-    Example17(),
-    Example18(),
-    Example19(),
-    Example20(),
-    Example21(),
-    Example22(),
-    Example23(),
-    Example24(),
-    Example25(),
-    Example26(),
-    Example27(),
-    Example28(),
-    Example29(),
+    const Example1(),
+    const Example2(),
+    const Example3(),
+    const Example4(),
+    const Example5(),
+    const Example6(),
+    const Example7(),
+    const Example8(),
+    const Example9(),
+    const Example10(),
+    const Example11(),
+    const Example12(),
+    const Example13(),
+    const Example14(),
+    const Example15(),
+    const Example16(),
+    const Example17(),
+    const Example18(),
+    const Example19(),
+    const Example20(),
+    const Example21(),
+    const Example22(),
+    const Example23(),
+    const Example24(),
+    const Example25(),
+    const Example26(),
+    const Example27(),
+    const Example28(),
+    const Example29(),
   ];
 
   @override
   void initState() {
     count = 1;
-    code = Example1().code;
-    explanation = Example1().explanation;
+    code = const Example1().code;
+    explanation = const Example1().explanation;
 
     super.initState();
   }
@@ -190,6 +194,8 @@ class Button extends StatelessWidget {
 //////////////////////////////////////////////////
 
 class Example1 extends Example {
+  const Example1({super.key});
+
   @override
   final String code = 'Container(color: red)';
   @override
@@ -206,6 +212,8 @@ class Example1 extends Example {
 //////////////////////////////////////////////////
 
 class Example2 extends Example {
+  const Example2({super.key});
+
   @override
   final String code = 'Container(width: 100, height: 100, color: red)';
   @override
@@ -222,6 +230,8 @@ class Example2 extends Example {
 //////////////////////////////////////////////////
 
 class Example3 extends Example {
+  const Example3({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -243,6 +253,8 @@ class Example3 extends Example {
 //////////////////////////////////////////////////
 
 class Example4 extends Example {
+  const Example4({super.key});
+
   @override
   final String code =
       'Align(\n'
@@ -265,6 +277,8 @@ class Example4 extends Example {
 //////////////////////////////////////////////////
 
 class Example5 extends Example {
+  const Example5({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -291,6 +305,8 @@ class Example5 extends Example {
 //////////////////////////////////////////////////
 
 class Example6 extends Example {
+  const Example6({super.key});
+
   @override
   final String code = 'Center(child: Container(color: red))';
   @override
@@ -314,6 +330,8 @@ class Example6 extends Example {
 //////////////////////////////////////////////////
 
 class Example7 extends Example {
+  const Example7({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -348,6 +366,8 @@ class Example7 extends Example {
 //////////////////////////////////////////////////
 
 class Example8 extends Example {
+  const Example8({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -373,6 +393,8 @@ class Example8 extends Example {
 //////////////////////////////////////////////////
 
 class Example9 extends Example {
+  const Example9({super.key});
+
   @override
   final String code =
       'ConstrainedBox(\n'
@@ -399,6 +421,8 @@ class Example9 extends Example {
 //////////////////////////////////////////////////
 
 class Example10 extends Example {
+  const Example10({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -427,6 +451,8 @@ class Example10 extends Example {
 //////////////////////////////////////////////////
 
 class Example11 extends Example {
+  const Example11({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -455,6 +481,8 @@ class Example11 extends Example {
 //////////////////////////////////////////////////
 
 class Example12 extends Example {
+  const Example12({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -483,6 +511,8 @@ class Example12 extends Example {
 //////////////////////////////////////////////////
 
 class Example13 extends Example {
+  const Example13({super.key});
+
   @override
   final String code =
       'UnconstrainedBox(\n'
@@ -500,6 +530,8 @@ class Example13 extends Example {
 //////////////////////////////////////////////////
 
 class Example14 extends Example {
+  const Example14({super.key});
+
   @override
   final String code =
       'UnconstrainedBox(\n'
@@ -519,6 +551,8 @@ class Example14 extends Example {
 //////////////////////////////////////////////////
 
 class Example15 extends Example {
+  const Example15({super.key});
+
   @override
   final String code =
       'OverflowBox(\n'
@@ -548,6 +582,8 @@ class Example15 extends Example {
 //////////////////////////////////////////////////
 
 class Example16 extends Example {
+  const Example16({super.key});
+
   @override
   final String code =
       'UnconstrainedBox(\n'
@@ -571,6 +607,8 @@ class Example16 extends Example {
 //////////////////////////////////////////////////
 
 class Example17 extends Example {
+  const Example17({super.key});
+
   @override
   final String code =
       'UnconstrainedBox(\n'
@@ -601,6 +639,8 @@ class Example17 extends Example {
 //////////////////////////////////////////////////
 
 class Example18 extends Example {
+  const Example18({super.key});
+
   @override
   final String code =
       'FittedBox(\n'
@@ -622,6 +662,8 @@ class Example18 extends Example {
 //////////////////////////////////////////////////
 
 class Example19 extends Example {
+  const Example19({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -643,6 +685,8 @@ class Example19 extends Example {
 ////////////////////////////////////////////////////
 
 class Example20 extends Example {
+  const Example20({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -666,6 +710,8 @@ class Example20 extends Example {
 //////////////////////////////////////////////////
 
 class Example21 extends Example {
+  const Example21({super.key});
+
   @override
   final String code =
       'Center(\n'
@@ -685,6 +731,8 @@ class Example21 extends Example {
 //////////////////////////////////////////////////
 
 class Example22 extends Example {
+  const Example22({super.key});
+
   @override
   final String code =
       'FittedBox(\n'
@@ -705,6 +753,8 @@ class Example22 extends Example {
 //////////////////////////////////////////////////
 
 class Example23 extends Example {
+  const Example23({super.key});
+
   @override
   final String code =
       'Row(children:[\n'
@@ -737,6 +787,8 @@ class Example23 extends Example {
 //////////////////////////////////////////////////
 
 class Example24 extends Example {
+  const Example24({super.key});
+
   @override
   final String code =
       'Row(children:[\n'
@@ -767,6 +819,8 @@ class Example24 extends Example {
 //////////////////////////////////////////////////
 
 class Example25 extends Example {
+  const Example25({super.key});
+
   @override
   final String code =
       'Row(children:[\n'
@@ -803,6 +857,8 @@ class Example25 extends Example {
 //////////////////////////////////////////////////
 
 class Example26 extends Example {
+  const Example26({super.key});
+
   @override
   final String code =
       'Row(children:[\n'
@@ -839,6 +895,8 @@ class Example26 extends Example {
 //////////////////////////////////////////////////
 
 class Example27 extends Example {
+  const Example27({super.key});
+
   @override
   final String code =
       'Row(children:[\n'
@@ -879,6 +937,8 @@ class Example27 extends Example {
 //////////////////////////////////////////////////
 
 class Example28 extends Example {
+  const Example28({super.key});
+
   @override
   final String code =
       'Scaffold(\n'
@@ -911,6 +971,8 @@ class Example28 extends Example {
 //////////////////////////////////////////////////
 
 class Example29 extends Example {
+  const Example29({super.key});
+
   @override
   final String code =
       'Scaffold(\n'

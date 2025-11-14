@@ -7,6 +7,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
+import 'package:flutter/widget_previews.dart';
 
 /// {@template flutter_render_object}
 /// Flutter render object widget.
@@ -18,6 +19,14 @@ class FlutterRenderObject extends StatefulWidget {
   @override
   State<FlutterRenderObject> createState() => _FlutterRenderObjectState();
 }
+
+@Preview()
+WidgetBuilder preview() =>
+    (context) => Container(width: 100, height: 100, color: Colors.yellow, child: const FlutterLogo(size: 100));
+
+@Preview()
+WidgetBuilder preview2() =>
+    (context) => Container(width: 100, height: 100, color: Colors.purple, child: const FlutterLogo(size: 100));
 
 class _FlutterRenderObjectState extends State<FlutterRenderObject> {
   late final TextEditingController _controller;
@@ -35,10 +44,10 @@ class _FlutterRenderObjectState extends State<FlutterRenderObject> {
       child: SizedBox(
         width: 220,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: .end,
           children: [
             Align(
-              alignment: Alignment.centerRight,
+              alignment: .centerRight,
               child: Container(
                 color: Colors.blue[100]!,
                 padding: const EdgeInsets.all(16),
@@ -54,7 +63,7 @@ class _FlutterRenderObjectState extends State<FlutterRenderObject> {
             ),
 
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: 24),
+              padding: const .symmetric(vertical: 24),
               child: TextField(controller: _controller),
             ),
           ],
